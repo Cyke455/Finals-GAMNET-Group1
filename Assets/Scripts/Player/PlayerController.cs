@@ -1,6 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class PlayerController : NetworkBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
@@ -14,6 +15,8 @@ public class PlayerController : NetworkBehaviour
     private float _moveDirection;
     private bool _isGrounded;
     private PlayerInputActions _playerInputActions;
+
+    public string TitleScreenSceneName;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -100,6 +103,7 @@ public class PlayerController : NetworkBehaviour
     {
         _hitSpike = true;
         _animator.SetTrigger("Disappear");
+        SceneManager.LoadScene(TitleScreenSceneName);
     }
 
     [Rpc(SendTo.Everyone)]

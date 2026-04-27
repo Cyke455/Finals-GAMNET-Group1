@@ -4064,6 +4064,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -2358862249386007137, guid: 56d6dc9d2cfbf5340bc647d1e82ed401, type: 3}
+      propertyPath: TitleScreenSceneName
+      value: SampleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: -2358862249386007137, guid: 56d6dc9d2cfbf5340bc647d1e82ed401, type: 3}
       propertyPath: characters.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4870,6 +4874,7 @@ MonoBehaviour:
     NetworkTopology: 0
     UseCMBService: 0
     AutoSpawnPlayerPrefabClientSide: 1
+    NetworkMessageMetrics: 1
     NetworkProfilingMetrics: 1
     OldPrefabList: []
   RunInBackground: 1
