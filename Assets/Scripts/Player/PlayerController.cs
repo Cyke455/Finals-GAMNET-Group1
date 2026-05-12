@@ -86,7 +86,7 @@ public class PlayerController : NetworkBehaviour
     {
         print("apple");
         onFruitCollected.RaiseEvent();
-        FindObjectOfType<RandomSpawner>().StopSpawning();
+        FindAnyObjectByType<RandomSpawner>().StopSpawning();
     }
     [Rpc(SendTo.Everyone)]
     public void FinishedRPC()
@@ -109,7 +109,7 @@ public class PlayerController : NetworkBehaviour
     [Rpc(SendTo.Everyone)]
     private void RequestRespawnServerRpc(ulong clientId)
     {
-        FindObjectOfType<RespawnManager>().RespawnPlayer(clientId);
+        FindAnyObjectByType<RespawnManager>().RespawnPlayer(clientId);
         GetComponent<NetworkObject>().Despawn();
     }
 
@@ -122,7 +122,7 @@ public class PlayerController : NetworkBehaviour
     [Rpc(SendTo.Everyone)]
     private void NotifyRespawnServerRpc(ulong clientId)
     {
-        FindObjectOfType<RespawnManager>().RespawnPlayer(clientId);
+        FindAnyObjectByType<RespawnManager>().RespawnPlayer(clientId);
         GetComponent<NetworkObject>().Despawn();
     }
     private void OnTriggerEnter2D(Collider2D other)
