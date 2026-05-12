@@ -45,6 +45,7 @@ public class LobbyManager : MonoBehaviour
     private async void Start()
     {
         Instance = this;
+        lobbyItemPrefab.gameObject.SetActive(false);
 
         await UnityServices.InitializeAsync();
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
@@ -110,34 +111,37 @@ public class LobbyManager : MonoBehaviour
 
     private async void ShowLobbies()
     {
-
         while (Application.isPlaying && lobbyListParent.activeInHierarchy)
         {
             try
             {
                 QueryResponse queryResponse = await LobbyService.Instance.QueryLobbiesAsync();
 
+                // Clear existing list except the template
                 foreach (Transform child in lobbyContentParent)
                 {
-
                     if (child == lobbyItemPrefab) continue;
                     Destroy(child.gameObject);
                 }
 
                 foreach (Lobby lobby in queryResponse.Results)
                 {
+                    // Instantiate and then activate the clone
                     Transform newLobbyItem = Instantiate(lobbyItemPrefab, lobbyContentParent);
-
                     newLobbyItem.gameObject.SetActive(true);
 
-                    newLobbyItem.GetComponent<JoinLobbyButton>().lobbyId = lobby.Id;
+                    if (newLobbyItem.TryGetComponent(out JoinLobbyButton joinButton))
+                    {
+                        joinButton.lobbyId = lobby.Id;
+                    }
+
                     string info = $"{lobby.Name}, {lobby.Players.Count}/{lobby.MaxPlayers}";
                     newLobbyItem.GetChild(0).GetComponent<TextMeshProUGUI>().text = info;
                 }
             }
             catch (System.Exception e)
             {
-                Debug.LogError(e.Message);
+                Debug.LogError($"Lobby Query Error: {e.Message}");
             }
 
             await Task.Delay(3000);
