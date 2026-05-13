@@ -21628,9 +21628,21 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5666956275369508038, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d53af316f3021d4d90e2d2257bb11ad, type: 2}
     - target: {fileID: 6172153323722454568, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
       propertyPath: m_Name
       value: Background Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555827043401179563, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555827043401179563, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
+      propertyPath: scrollSpeed.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

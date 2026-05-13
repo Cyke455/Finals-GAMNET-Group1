@@ -25950,6 +25950,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7555827043401179563, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555827043401179563, guid: 89792f3e67ae41544a315028948a38d8, type: 3}
+      propertyPath: scrollSpeed.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

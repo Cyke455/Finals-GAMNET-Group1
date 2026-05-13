@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7378005140293593670}
   - component: {fileID: -2740826227793114569}
   m_Layer: 0
-  m_Name: Virtual Guy
+  m_Name: Mask Dude
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: bf7ab25a445c3b142b21561ed77ee9d1, type: 3}
+  m_Sprite: {fileID: -6367560908665664636, guid: bb0c06c3fa8a527408761983c7a2fc16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ Animator:
   m_GameObject: {fileID: 7135351787910475001}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8029ffc58b5c4bf4ab5f130527490a7b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2b51ed384edce3849bbfb00aa3db8a5a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1510392014
+  GlobalObjectIdHash: 449681764
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
