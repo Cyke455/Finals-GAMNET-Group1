@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 173708715}
   - component: {fileID: 173708716}
   - component: {fileID: 173708717}
+  - component: {fileID: 173708718}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Spikes
@@ -472,6 +473,19 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
+--- !u!114 &173708718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173708714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681ce93e40aa3bd428ff03fda5f122f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
 --- !u!1 &246283992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4050,6 +4064,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -2358862249386007137, guid: 56d6dc9d2cfbf5340bc647d1e82ed401, type: 3}
+      propertyPath: TitleScreenSceneName
+      value: SampleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: -2358862249386007137, guid: 56d6dc9d2cfbf5340bc647d1e82ed401, type: 3}
       propertyPath: characters.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4856,6 +4874,7 @@ MonoBehaviour:
     NetworkTopology: 0
     UseCMBService: 0
     AutoSpawnPlayerPrefabClientSide: 1
+    NetworkMessageMetrics: 1
     NetworkProfilingMetrics: 1
     OldPrefabList: []
   RunInBackground: 1
