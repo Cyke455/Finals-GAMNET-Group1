@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1689305247
+  GlobalObjectIdHash: 1510392014
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -223,7 +223,7 @@ MonoBehaviour:
   jumpForce: 10
   onFruitCollected: {fileID: 11400000, guid: 17f4ec73f55384b44a98391bfd02c766, type: 2}
   onReachFlag: {fileID: 11400000, guid: 42c8605937fa1404d9f80766293e99fb, type: 2}
-  TitleScreenSceneName: SampleScene
+  TitleScreenSceneName: TitleScreen
   Character:
   - {fileID: 9100000, guid: 8029ffc58b5c4bf4ab5f130527490a7b, type: 2}
   - {fileID: 9100000, guid: 2b51ed384edce3849bbfb00aa3db8a5a, type: 2}
