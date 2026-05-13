@@ -485,7 +485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681ce93e40aa3bd428ff03fda5f122f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveSpeed: 0
 --- !u!1 &246283992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4830,6 +4831,7 @@ MonoBehaviour:
   ConnectionData:
     Address: 127.0.0.1
     Port: 7777
+    WebSocketPath: /
     ServerListenAddress: 127.0.0.1
     ClientBindPort: 0
   DebugSimulator:
